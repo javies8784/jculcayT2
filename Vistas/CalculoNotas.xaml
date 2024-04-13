@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jculcayBT2.Vistas.CalculoNotas"
+             Title="CalculoNotas">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10"
+                            Padding="0,0"
+                            VerticalOptions="Start" Background="#F4F6F6">
+
+
+            <Grid Background="#3498DB">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="90" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                Source="icono.jpeg"                
+                HeightRequest="60"
+                HorizontalOptions="Start" 
+                Grid.Row="0"
+				Grid.Column="0" />
+
+                <Label 
+                    Text="Sistema de calificaciones U israel"
+                    VerticalOptions="Center" 
+                    FontSize="15"
+                    TextColor="White"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Center" 
+                    Grid.Row="0"
+				    Grid.Column="1"/>
+                <Image Source="icono.jpeg"
+                       HeightRequest="60"
+                       HorizontalOptions="End" 
+                       Grid.Row="0"
+                       Grid.Column="2"/>
+
+            </Grid>
+
+
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="210"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Estudiantes:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+					Grid.Column="0" 
+                    
+                 />
+                <Picker x:Name="pkEstudiantes" HorizontalOptions="CenterAndExpand"  WidthRequest="200" FontSize="Body" VerticalOptions="Start" 
+                        Grid.Column="1" 
+                        Grid.Row="0">
+                    <Picker.Items>
+                        <x:String>JESUS ABARCA</x:String>
+                        <x:String>ANDRES HARO</x:String>
+                        <x:String>WILSON CAJISACA</x:String>
+                        <x:String>JONNY MACAS</x:String>
+                        <x:String>CRISTIAN CHUQUITARCO</x:String>
+                    </Picker.Items>
+                </Picker>
+
+
+
+            </Grid>
+
+            <Label 
+                    Text="PARCIAL 1"                    
+                    HorizontalTextAlignment="Center"                
+                    FontSize="12"
+                    TextColor="White"                                        
+                    Background="#3498DB"  WidthRequest="200"/>
+
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="222*" />
+                    <RowDefinition Height="222*" />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="200" />
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese nota siguimiento:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="0" 
+                    
+                 />
+
+                <Entry x:Name="txtSeguimientoP1"
+                       Keyboard="Numeric"
+                       Placeholder=" "
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="0"
+                       Grid.Column="1" 
+                       WidthRequest="200"                       
+                       />
+
+
+                <Label Text="Ingrese nota examen:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="2"
+                    Grid.Column="0" 
+                    
+                 />
+
+                <Entry x:Name="txtExamenP1"
+                       Keyboard="Numeric"
+                       Placeholder=""                       
+                       MaxLength="10"
+                       HorizontalOptions="Center"
+                       WidthRequest="200"
+                       Grid.Row="2"
+                       Grid.Column="1" />
+
+                <Label 
+                    Text="Nota paracial 1: "
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="3"
+                    Grid.Column="0" />
+
+                <Label x:Name="notaP1"                    
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+
+            </Grid>
+
+            <!-- fin tercera parte -->
+
+            <!-- cuarta parte -->
+            <Label 
+                    Text="PARCIAL 2"                    
+                    FontSize="12"
+                    TextColor="White"                  
+                    HorizontalTextAlignment="Center"                
+                     Background="#3498DB" WidthRequest="200"/>
+
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="222*" />
+                    <RowDefinition Height="222*" />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="200" />
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese nota siguimiento:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="0"
+                    Grid.Column="0" 
+                    
+                 />
+
+                <Entry x:Name="txtSeguimientoP2"
+                       Placeholder=""
+                       Keyboard="Numeric"
+                       MaxLength="12"
+                       HorizontalOptions="Start"
+                       Grid.Row="0"
+                       Grid.Column="1" 
+                       WidthRequest="200"
+                       />
+
+
+                <Label Text="Ingrese nota examen:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="2"
+                    Grid.Column="0" 
+                    
+                 />
+
+                <Entry x:Name="txtExamenP2"
+                       Keyboard="Numeric"
+                       Placeholder=" "                       
+                       MaxLength="10"
+                       HorizontalOptions="Center"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       WidthRequest="200"/>
+
+                <Label 
+                    Text="Nota paracial 2: "
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="3"
+                    Grid.Column="0" />
+
+                <Label x:Name="notaP2"                    
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                                        
+                    HorizontalOptions="Start" 
+                    Grid.Row="3"
+                    Grid.Column="1" />
+
+
+            </Grid>
+            <!-- cuarta parte -->
+            <Button x:Name="btCalulo" 
+                    Text="Realizar calculo"
+                    Background="#3498DB"
+                    Clicked="btCalulo_Clicked"/>
+
+            <Grid Padding="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="222*" />
+                    <RowDefinition Height="222*" />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350" />
+                    <ColumnDefinition  />
+
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btLimpiar" 
+                    Text="Limpiar"
+                    Background="#B2BABB"
+                    Clicked="btLimpiar_Clicked"
+                    WidthRequest="80"
+                    VerticalOptions="End" 
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
