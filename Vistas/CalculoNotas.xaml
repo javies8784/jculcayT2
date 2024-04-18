@@ -59,8 +59,7 @@
                     <ColumnDefinition Width="210"/>
                 </Grid.ColumnDefinitions>
 
-
-                <Label Text="Estudiantes:"
+                <Label Text="Fecha:"
                     VerticalOptions="Center" 
                     FontSize="12"
                     TextColor="#154360"                    
@@ -70,9 +69,35 @@
 					Grid.Column="0" 
                     
                  />
+                <DatePicker x:Name="Pkfecha"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+
+                <Label Text=""
+                    Grid.Row="1"
+					Grid.Column="0" 
+                    
+                 />
+                <Label Text=""
+                    Grid.Row="1"
+					Grid.Column="1" 
+                    
+                 />
+
+                <Label Text="Estudiantes:"
+                    VerticalOptions="Center" 
+                    FontSize="12"
+                    TextColor="#154360"                    
+                    TextDecorations="Underline"
+                    HorizontalOptions="Start" 
+                    Grid.Row="2"
+					Grid.Column="0" 
+                    
+                 />
                 <Picker x:Name="pkEstudiantes" HorizontalOptions="CenterAndExpand"  WidthRequest="200" FontSize="Body" VerticalOptions="Start" 
+                        Grid.Row="2"
                         Grid.Column="1" 
-                        Grid.Row="0">
+                        >
                     <Picker.Items>
                         <x:String>JESUS ABARCA</x:String>
                         <x:String>ANDRES HARO</x:String>

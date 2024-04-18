@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jculcayBT2.Vistas.Vlogin"
+             Title="Login" >
+    <VerticalStackLayout Padding="20" Background="#2270A3">
+        <Label Text=""/>
+        <Label Text=""/>
+        <Label Text=""/>
+        <Label Text=""/>
+        <Label 
+            Text="BIENVENIDO"            
+            TextColor="White"
+            FontFamily="Calibri (Cuerpo)"            
+            FontSize="40"            
+            FontAttributes="Bold,Italic"
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" />
+
+
+
+        <Label Text=""/>
+        <Label Text=""/>
+
+        <Grid Background="White" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="280" 
+              Padding="1,20,5,20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario:"
+                   VerticalOptions="Center" 
+                   FontSize="12"
+                   TextColor="Black"     
+                   FontAttributes="Bold"                   
+                   HorizontalOptions="Start"
+                   Padding="35,0,10,0"
+                   Grid.Row="0"
+                   Grid.Column="0" 
+    
+             />
+            <Entry x:Name="txtUsario"               
+               Placeholder=" "
+               MaxLength="12"
+               HorizontalOptions="Start"
+               Grid.Row="0"
+               Grid.Column="1" 
+               WidthRequest="150"                       
+            />
+            <Label Text=""
+                   Grid.Row="1"
+                   Grid.Column="0" />
+            <Label 
+                Text=""
+                Grid.Row="1"
+                Grid.Column="1" />
+
+            <Label Text="Contraseña:"
+                    VerticalOptions="Center" 
+                    HorizontalTextAlignment="End"
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    TextColor="Black"      
+                    Padding="18,0,2,0"
+                    HorizontalOptions="Start"
+                    Grid.Row="2"
+                    Grid.Column="0" 
+    
+              />
+            <Entry x:Name="txtContrsena"
+                   Placeholder=" "
+                   MaxLength="12"
+                   HorizontalOptions="Start"
+                   Grid.Row="2"                   
+                   Grid.Column="1" 
+                   WidthRequest="150"                       
+             />
+
+        </Grid>
+        <Label Text=""/>
+        <Button x:Name="btIngresar" 
+                Text="INGRESAR"
+                TextColor="Black"
+                Background="White"
+                Clicked="btIngresar_Clicked"
+                WidthRequest="150"
+                VerticalOptions="End" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

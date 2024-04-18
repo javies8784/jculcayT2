@@ -6,6 +6,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new Vistas.CalculoNotas();
-	}
+		//MainPage = new Vistas.CalculoNotas();
+		MainPage = new NavigationPage(new Vistas.Vlogin("a", "b"));
+    }
 }

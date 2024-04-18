@@ -1,3 +1,5 @@
+
+
 namespace jculcayBT2.Vistas;
 
 public partial class CalculoNotas : ContentPage
@@ -16,7 +18,7 @@ public partial class CalculoNotas : ContentPage
         notaP1.Text = "";
         notaP2.Text = "";
         pkEstudiantes.SelectedIndex = -1;
-
+        
 
         
 
@@ -35,13 +37,55 @@ public partial class CalculoNotas : ContentPage
             estudiante = pkEstudiantes.Items[pkEstudiantes.SelectedIndex].ToString();
 
         }
+        double Nsg1;
 
-        double Nsg1 = double.Parse(txtSeguimientoP1.Text) * 0.3;
-        double Nex1 = double.Parse(txtExamenP1.Text) * 0.2;
+        if (double.Parse(txtSeguimientoP1.Text) <= 10)
+        {
+            Nsg1 = double.Parse(txtSeguimientoP1.Text) * 0.3;
+        }
+        else {
+            Nsg1 = 0;
+            DisplayAlert("Alerta", "La nota del seguimiento no se encuentra en en el rango menor o igual a 10", "Cerrar");
+        }
+        double Nex1;
+        if (double.Parse(txtExamenP1.Text) <= 10)
+        {
+            Nex1 = double.Parse(txtExamenP1.Text) * 0.2;
+            
+        }
+        else
+        {
+            Nex1 = 0;
+            DisplayAlert("Alerta", "La nota del examen no se encuentra en en el rango  menor o igual a 10", "Cerrar");
+        }
+         
         double nota1 = Nsg1 + Nex1;
 
-        double Nsg2 = double.Parse(txtSeguimientoP2.Text) * 0.3;
-        double Nex2 = double.Parse(txtExamenP2.Text) * 0.2;
+
+        double Nsg2;
+
+        if (double.Parse(txtSeguimientoP2.Text) <= 10)
+        {
+            Nsg2 = double.Parse(txtSeguimientoP2.Text) * 0.3;
+        }
+        else
+        {
+            Nsg2 = 0;
+            DisplayAlert("Alerta", "La nota del seguimiento no se encuentra en en el rango menor o igual a 10", "Cerrar");
+        }
+        double Nex2;
+        if (double.Parse(txtExamenP2.Text) <= 10)
+        {
+            Nex2 = double.Parse(txtExamenP2.Text) * 0.2;
+
+        }
+        else
+        {
+            Nex2 = 0;
+            DisplayAlert("Alerta", "La nota del examen no se encuentra en en el rango  menor o igual a 10", "Cerrar");
+        }
+
+
         double nota2 = Nsg2 + Nex2;
 
         double notaf = nota1 + nota2;
@@ -49,7 +93,8 @@ public partial class CalculoNotas : ContentPage
         notaP1.Text = nota1.ToString("N2");
         notaP2.Text = nota2.ToString("N2");
         string estado = " ";
-        string fecha = DateTime.Now.ToShortDateString();
+        //string fecha = Pkfecha.ToString();
+        string fecha = Pkfecha.Date.ToString("dd/MM/yyyy");
 
         if (notaf >= 7)
         {
