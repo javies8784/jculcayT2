@@ -76,6 +76,7 @@
     
               />
             <Entry x:Name="txtContrsena"
+                   IsPassword="true"
                    Placeholder=" "
                    MaxLength="12"
                    HorizontalOptions="Start"

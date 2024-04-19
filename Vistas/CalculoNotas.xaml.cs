@@ -8,6 +8,12 @@ public partial class CalculoNotas : ContentPage
 	{
 		InitializeComponent();
 	}
+    public CalculoNotas(string usuario)
+    {
+        InitializeComponent();
+        DisplayAlert("Alerta", "Bienvenido " + usuario, "Cerrar");
+        lblUsuario.Text = "Usuario conectado " + usuario;
+    }
 
     private void btLimpiar_Clicked(object sender, EventArgs e)
     {

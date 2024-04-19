@@ -49,20 +49,21 @@ public partial class Vlogin : ContentPage
         if (usuario1 == usuarios[0] && contrasena1 == contrasenas[0])
         {
 
-            DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
+            //DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
+            Navigation.PushAsync(new CalculoNotas(usuario1));
 
         }
 
         else if (usuario1 == usuarios[1] && contrasena1 == contrasenas[1])
         {
-
-            DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
+            Navigation.PushAsync(new CalculoNotas(usuario1));
+            //DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
 
         }
         else if (usuario1 == usuarios[2] && contrasena1 == contrasenas[2])
         {
-
-            DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
+            Navigation.PushAsync(new CalculoNotas(usuario1));
+            //DisplayAlert("Alerta", "Bienvenido: " + usuario1, "cerrar");
 
         }
         else {
